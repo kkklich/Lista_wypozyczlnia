@@ -1,0 +1,21 @@
+﻿<Window x:Class="ListaWypozyczen.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListaWypozyczen"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="listViewwyp" HorizontalAlignment="Left" Height="191" Margin="69,79,0,0" VerticalAlignment="Top" Width="330">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="id" DisplayMemberBinding="{Binding id_wypozyczenia}" Width="30"/>
+                    <GridViewColumn Header="imie" DisplayMemberBinding="{Binding imie  }" Width="140" />
+                    <GridViewColumn Header="tytul" DisplayMemberBinding="{Binding tytul}" Width="140"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>

@@ -1,0 +1,40 @@
+﻿<Window x:Class="ListaWypozyczen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListaWypozyczen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnwypozycz1" Content="Wypożycz" HorizontalAlignment="Left" Height="37" Margin="430,272,0,0" VerticalAlignment="Top" Width="230" Click="Btnwypozycz1_Click"/>
+        <ListView x:Name="listViewklienci1" HorizontalAlignment="Left" Height="179" Margin="10,53,0,0" VerticalAlignment="Top" Width="350">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding id}" Width="40" />
+                    <GridViewColumn Header="Imie" DisplayMemberBinding="{Binding imie}" Width="100" />
+                    <GridViewColumn Header="nazwisko" DisplayMemberBinding="{Binding nazwisko }" Width="100"/>
+                    <GridViewColumn Header="numer tel" DisplayMemberBinding="{Binding numer_telefonu}" Width="100" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="430,104,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListView x:Name="listViewfilmy2" HorizontalAlignment="Left" Height="179" Margin="399,53,0,0" VerticalAlignment="Top" Width="350">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding id}" Width="40" />
+                    <GridViewColumn Header="film" DisplayMemberBinding="{Binding tytul }" Width="150" />
+                    <GridViewColumn Header="rezyser" DisplayMemberBinding="{Binding rezyser}" Width="150"/>
+                    
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="Pokaliste" Content="Pokaz Liste" HorizontalAlignment="Left" Height="41" Margin="430,333,0,0" VerticalAlignment="Top" Width="230" Click="Pokaliste_Click"/>
+
+
+
+
+
+
+    </Grid>
+</Window>
